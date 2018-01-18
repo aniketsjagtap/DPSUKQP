@@ -17,4 +17,4 @@
 `cordova build android`
 
 ### apk
-android-debug can be find at: `Your_Path_to_Directory\DPSUK\platforms\android\build\outputs\apk\debug` location.
+`android-debug.apk` can be find at: `Your_Path_to_Directory\DPSUK\platforms\android\build\outputs\apk\debug` location.
