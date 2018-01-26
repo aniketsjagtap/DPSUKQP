@@ -43,12 +43,30 @@ var app = {
         //alert('Received Event: ' + id);
 		
 		//document.getElementById("uploadFile").addEventListener("click", uploadFile);
+		document.addEventListener("backbutton", onBackKeyDown, false);
 		document.getElementById("validate").addEventListener("click", validate);
 		document.getElementById("fetchList").addEventListener("click", fetchList);
-	//	document.getElementById("downloadFile").addEventListener("click", downloadFile);
-		document.addEventListener("backbutton", onBackKeyDown, false);
+		
     }
 };
+
+function onBackKeyDown(e) {
+	e.preventDefault();
+	// Beep once!
+	navigator.notification.beep(1);
+	navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
+	// Prompt the user with the choice
+}
+
+function onConfirm(button) {
+	if(button==2||button=="2"){//If User selected No, then we just do nothing
+		return;
+	}else{
+		
+		navigator.app.exitApp();// Otherwise we quit the app.
+	}
+}
+
 function validate(){
 	var levelSelect = document.getElementById("level");
 	var level = levelSelect.options[levelSelect.selectedIndex].value;
@@ -238,21 +256,5 @@ function listPapers(item, index) {
    }
 	
 }*/
-	function onBackKeyDown(e) {
-		e.preventDefault();
-		// Beep once!
-		navigator.notification.beep(1);
-		navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
-		// Prompt the user with the choice
-	}
-
-	function onConfirm(button) {
-		if(button==2||button=="2"){//If User selected No, then we just do nothing
-			return;
-		}else{
-			
-			navigator.app.exitApp();// Otherwise we quit the app.
-		}
-	}
 
 app.initialize();

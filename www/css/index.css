@@ -96,7 +96,7 @@ h1 {
 }
 
 .event.received {
-    background-color:#4B946A;
+    background-color:#09696b;
     display:none;
 }
 
@@ -142,4 +142,15 @@ select{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+	display:block;
+}
+
+#AboutUs{
+	text-align: justify;
+    font-family: Courier New, Helvetica, sans-serif;
+	font-style: oblique;
+	font-size: 8px;
+	padding:5px;
+	border-bottom: 3px solid red;
+    background-color: lightgrey;
 }
