@@ -33,55 +33,77 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"></link>
+		<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+		
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
         <title>DP SUK QP</title>
 		
     </head>
     <body>
-        <div class="app">
-            <h1>DP SUK QP</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening"></p>
-                <p class="event received"></p>
-            </div>
-			<!--<button id = "uploadFile">UPLOAD</button>-->
-			<div>
-				<label>Stream :</label>
-				<select>
-				  <option value="">Select Stream</option>
-				  <option value="UG">Arts</option>
-				  <option value="PG">Commerce</option>
-				  <option value="PG">Science</option>
-				</select>
+        <div class="app" id="select">
+			<div >
+				<h1>DP SUK QP</h1>
+				<div id="deviceready" class="blink">
+					<p class="event listening"></p>
+					<p class="event received"></p>
+				</div><br>
+				<!--<button id = "uploadFile">UPLOAD</button>-->
+				<table style="width:100%" >
+					<tr>
+						<td>
+							<label>Level :</label>
+						</td>
+						<td>
+							<select id="level">
+							  <option value="">Select Level</option>
+							  <option value="UG">Under Graduate</option>
+							  <option value="PG">Post Graduate</option>
+							</select>
+						</td> 
+						
+					</tr>
+					<tr>
+						<td>
+							<label>Stream :</label>
+						</td>
+						<td>
+							<select id="stream">
+							  <option value="">Select Stream</option>
+							  <option value="ARTS">Arts</option>
+							  <option value="COMMERSE">Commerce</option>
+							  <option value="SCIENCE">Science</option>
+							</select>
+						</td>
+					</tr>
+				  
+				  <tr>
+					<td>
+						<label>Year :</label>
+					</td>
+					<td>
+						<select id="year">
+						  <option value="">Select Year</option>
+						  <option value="I">First Year</option>
+						  <option value="II">Second Year</option>
+						  <option value="III">Third Year</option>
+						</select>
+					</td>
+				  </tr>
+				 
+				</table>
+				<div>
+					<button id = "validate">List Papers</button>
+				</div>
 			</div>
-			<div>
-				<label>Level :</label>
-				<select>
-				  <option value="">Select Level</option>
-				  <option value="UG">Under Gradualte</option>
-				  <option value="PG">Post Graduate</option>
-				</select>
-			</div>
-			<div>
-				<label>Year :</label>
-				<select>
-				  <option value="">Select Year</option>
-				  <option value="saab">I</option>
-				  <option value="mercedes">II</option>
-				  <option value="audi">III</option>
-				</select>
-			</div>
-			<div>
-				<label>Semester :</label>
-				<select>
-				  <option value="">Select Semester</option>
-				  <option value="saab">I</option>
-				  <option value="mercedes">II</option>
-				</select>
-			</div>
-			<div>
-				<button id = "downloadFile">Get Paper</button>
-			</div>
+			
         </div>
+			<div>
+				<button class="button" id="gotoHome" onclick="location.reload();" data-icon="refresh" style="visibility: hidden; " >Search Again</button>
+				<p id="list"></p>
+			<div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
