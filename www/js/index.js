@@ -141,6 +141,7 @@ function fetchList(){
 		{
 			window.plugins.spinnerDialog.hide();
 			//location.reload();
+			console.log(data);
 			alert("Error in Fetching Papers!!!\nData: "+data+"\nStatus: "+status+"\nError: "+err);
 			
 		});
