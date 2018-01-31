@@ -34,27 +34,39 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"></link>
 		
-		<script src="js/jquery-2.1.4.min.js"></script>
+       
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		
         <title>DP SUK QP</title>
 		
     </head>
     <body>
+	<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+		  <a href="#" onclick="home();">Home</a>
+		  <a href="#" onclick="aboutUs();">About Us</a>
+		</div>
+
+		<!-- Use any element to open the sidenav -->
+	
+
+		<span style="font-size:24px" class="fa fa-bars" onclick="openNav()"></span>
+		
         <div class="app" id="select">
+			
+		
+
 			<div >
-				<h1>DP SUK QP</h1>
+				<h1>DP SUK QP</h1><br>
 				<div id="deviceready" class="blink">
 					<p class="event listening"></p>
 					<p class="event received"></p>
 				</div>
-				<p id="AboutUs">
-				This app is developed by Third Year B.Sc. students of D. P. Bhosale College, Koregaon (Dist.-Satara). An app includes Question Papers of B.A., B.Com., B.Sc., B.C.A., M.A. and M.com. courses of Shivaji University, Kolhapur. A student can easily download question papers whenever he/she wants. Hence, this app is very useful for students of Shivaji University, Kolhapur.
-				</p>
+				<br><br>
 				<!--<button id = "uploadFile">UPLOAD</button>-->
-				<table style="width:100%" >
+				<table >
 					<tr>
 						<td>
 							<label>Level :</label>
@@ -65,8 +77,7 @@
 							  <option value="UG">Under Graduate</option>
 							  <option value="PG">Post Graduate</option>
 							</select>
-						</td> 
-						
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -81,12 +92,11 @@
 							</select>
 						</td>
 					</tr>
-				  
-				  <tr>
-					<td>
-						<label>Year :</label>
-					</td>
-					<td>
+					<tr>
+						<td>
+							<label>Year :</label>
+						</td>
+						<td>
 						<select id="year">
 						  <option value="">Select Year</option>
 						  <option value="I">First Year</option>
@@ -94,9 +104,9 @@
 						  <option value="III">Third Year</option>
 						</select>
 					</td>
-				  </tr>
-				 
-				</table>
+					</tr>
+					
+				</table><br>	
 				<div>
 					<button id = "validate">List Papers</button>
 				</div>
@@ -104,11 +114,19 @@
 			</div>
 			
         </div>
-			<div>
-				<button class="button" id="gotoHome" onclick="location.reload();" data-icon="refresh" style="visibility: hidden; " >Search Again</button>
-				<p id="list"></p>
-			<div>
+		<div id="listPage">
+			<button class="button" id="gotoHome"  onclick="location.reload();" data-icon="refresh" style="visibility: hidden; " >Search Again</button>
+			<p id="list"></p>
+		</div>
+		<div id="aboutUs" style="visibility: hidden; ">
+			<h1>About Us</h1>
+			<p>
+			This app is developed by Third Year B.Sc. students of D. P. Bhosale College, Koregaon (Dist.-Satara). An app includes Question Papers of B.A., B.Com., B.Sc., B.C.A., M.A. and M.com. courses of Shivaji University, Kolhapur. A student can easily download question papers whenever he/she wants. Hence, this app is very useful for students of Shivaji University, Kolhapur.
+			</p>
+		</div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		
     </body>
 </html>

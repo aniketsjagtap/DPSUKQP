@@ -66,6 +66,25 @@ function onConfirm(button) {
 		navigator.app.exitApp();// Otherwise we quit the app.
 	}
 }
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function home(){
+	location.reload();
+}
+function aboutUs(){
+	document.getElementById("select").style.visibility = "hidden";
+	$("#listPage").remove();
+    closeNav();
+	document.getElementById("aboutUs").style.visibility = "visible";
+}
 
 function validate(){
 	var levelSelect = document.getElementById("level");
